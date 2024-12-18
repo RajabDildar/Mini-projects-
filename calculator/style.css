@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.mainContainer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  transform: scale(0.8);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper p {
+  text-align: end;
+  height: 2rem;
+  font-size: 1.5rem;
+  width: 23rem;
+  margin: auto;
+}
+
+.wrapper input {
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  text-align: end;
+  font-size: 2rem;
+  width: 23rem;
+  margin: auto;
+  border: none;
+  caret-color: transparent;
+  pointer-events: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.buttons {
+  padding: 2rem;
+  color: white;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "DEL DEL AC Divide"
+    "seven eight nine Mul"
+    "four five six Minus"
+    "one two three plus"
+    "zero zero dot Equal";
+}
+
+.btns {
+  font-size: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.numbers {
+  background-color: hsl(0, 0%, 50%);
+  &:hover {
+    background-color: hsl(0, 0%, 60%);
+  }
+}
+
+.btnAC {
+  grid-area: AC;
+  background-color: #a8a6a7;
+  color: black;
+  border-radius: 3rem;
+}
+
+.btnDEL {
+  width: 11rem;
+  border-radius: 3rem;
+  grid-area: DEL;
+  background-color: #a8a6a7;
+  color: black;
+}
+
+.btn0 {
+  grid-area: zero;
+  background-color: #333333;
+  width: 11rem;
+  border-radius: 3rem;
+}
+
+.btn1 {
+  grid-area: one;
+  background-color: #333333;
+}
+
+.btn2 {
+  grid-area: two;
+  background-color: #333333;
+}
+
+.btn3 {
+  grid-area: three;
+  background-color: #333333;
+}
+
+.btn4 {
+  grid-area: four;
+  background-color: #333333;
+}
+
+.btn5 {
+  grid-area: five;
+  background-color: #333333;
+}
+
+.btn6 {
+  grid-area: six;
+  background-color: #333333;
+}
+
+.btn7 {
+  grid-area: seven;
+  background-color: #333333;
+}
+
+.btn8 {
+  grid-area: eight;
+  background-color: #333333;
+}
+
+.btn9 {
+  grid-area: nine;
+  background-color: #333333;
+}
+
+.btnDot {
+  grid-area: dot;
+  background-color: #333333;
+}
+
+.btnMinus {
+  grid-area: Minus;
+  background-color: #ff9601;
+}
+
+.btnPlus {
+  grid-area: plus;
+  background-color: #ff9601;
+}
+
+.btnMul {
+  grid-area: Mul;
+  background-color: #ff9601;
+}
+
+.btnDivide {
+  grid-area: Divide;
+  background-color: #ff9601;
+}
+
+button {
+  grid-area: Equal;
+  background-color: #ff9601;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
