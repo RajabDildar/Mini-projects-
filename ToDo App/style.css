@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #374151;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  font-size: 2rem;
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vw;
+}
+
+.secOne label,
+section h2 {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+section input {
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 80%;
+  background-color: #111827;
+  color: #eee;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+section .inputWrapper,
+section ul li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 80vw;
+  margin-block: 2rem;
+}
+
+.secOne .inputWrapper .addTaskBtn {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* styling section two */
+section ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn,
+.completeBtn {
+  cursor: pointer;
+}
+/* media queries */
+@media (max-width: 680px) {
+  .secOne .inputWrapper input,
+  section ul li input {
+    width: 100%;
+  }
+  section ul li {
+    justify-content: space-around;
+  }
+}
