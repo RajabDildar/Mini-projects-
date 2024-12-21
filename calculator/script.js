@@ -4,6 +4,8 @@ const numbers = document.querySelectorAll(".numbers");
 const operators = document.querySelectorAll(".operators");
 let para = document.querySelector("p");
 let equalBtn = document.querySelector(".equalBtn");
+let allBtns = document.querySelectorAll(".btns");
+const btnDEL = document.querySelector(".btnDEL");
 
 //initializing operands,operators and calculate operation
 let operandOne;
@@ -11,6 +13,7 @@ let operandTwo;
 let result;
 let operation;
 
+//making calculate function
 const calculate = {
   add: (a, b) => {
     result = a + b;
@@ -90,8 +93,8 @@ equalBtn.addEventListener("click", (evt) => {
   }
 });
 
-//making AC button functional
-document.querySelector(".btnAC").addEventListener("click", (evt) => {
+//making C button functional
+document.querySelector(".btnC").addEventListener("click", (evt) => {
   operandOne = undefined;
   operandTwo = undefined;
   result = undefined;
@@ -104,6 +107,27 @@ document.querySelector(".btnAC").addEventListener("click", (evt) => {
 //making DEL button functional
 document.querySelector(".btnDEL").addEventListener("click", (evt) => {
   inputBox.value = inputBox.value.slice(0, -1);
+});
+
+//adding keyboard functionality
+allBtns.forEach((val) => {
+  document.addEventListener("keydown", (evt) => {
+    if (evt.key === val.innerText.toLowerCase()) {
+      val.click();
+    }
+  });
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Enter") {
+    equalBtn.click();
+  }
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Backspace") {
+    btnDEL.click();
+  }
 });
 
 //maintainig focus on inputBox

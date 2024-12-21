@@ -29,6 +29,12 @@ section h2 {
   color: #6b7280;
   font-weight: 600;
   font-size: 2rem;
+  user-select: none;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
 }
 
 section input {
@@ -54,7 +60,8 @@ section ul li {
   margin-block: 2rem;
 }
 
-.secOne .inputWrapper .addTaskBtn {
+.secOne .inputWrapper .addTaskBtn,
+.deleteAllBtn {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -63,6 +70,11 @@ section ul li {
   color: transparent;
   cursor: pointer;
   white-space: nowrap;
+  user-select: none;
+}
+
+.deleteAllBtn {
+  color: crimson;
 }
 
 /* styling section two */
@@ -74,7 +86,8 @@ section ul li {
 }
 
 .deleteBtn,
-.completeBtn {
+.completeBtn,
+.deleteAllBtn {
   cursor: pointer;
 }
 /* media queries */

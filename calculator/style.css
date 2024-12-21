@@ -58,7 +58,7 @@
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "DEL DEL AC Divide"
+    "DEL DEL C Divide"
     "seven eight nine Mul"
     "four five six Minus"
     "one two three plus"
@@ -83,8 +83,8 @@
   }
 }
 
-.btnAC {
-  grid-area: AC;
+.btnC {
+  grid-area: C;
   background-color: #a8a6a7;
   color: black;
   border-radius: 3rem;
