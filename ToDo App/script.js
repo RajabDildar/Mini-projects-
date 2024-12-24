@@ -26,10 +26,16 @@ function addToDo() {
     deleteBtn.src = "images/icons8-delete-24.png";
     deleteBtn.classList.add("deleteBtn");
 
+    //creating edit_btn
+    let edit_btn = document.createElement("div");
+    edit_btn.innerText = "Edit";
+    edit_btn.classList.add("edit_btn");
+
     //adding elements
     document.querySelector(".secTwo").append(ul);
     ul.prepend(li);
     li.appendChild(ToDo_inputBox);
+    li.appendChild(edit_btn);
     li.appendChild(completeBtn);
     li.appendChild(deleteBtn);
 
@@ -40,6 +46,7 @@ function addToDo() {
       let ul = document.createElement("ul");
       document.querySelector(".secThree").append(ul);
       ul.prepend(li);
+      li.childNodes[2].remove();
       li.childNodes[1].remove();
 
       //creating deleteAllBtn
@@ -64,6 +71,18 @@ function addToDo() {
     deleteBtn.addEventListener("click", (evt) => {
       let li = evt.target.parentElement;
       li.parentElement.remove();
+    });
+
+    //adding event listener to edit_btn
+    edit_btn.addEventListener("click", (evt) => {
+      if (evt.target.innerText === "Edit") {
+        ToDo_inputBox.readOnly = false;
+        ToDo_inputBox.focus();
+        evt.target.innerText = "Done";
+      } else if (evt.target.innerText === "Done") {
+        ToDo_inputBox.readOnly = true;
+        evt.target.innerText = "Edit";
+      }
     });
 
     inputBox.value = "";
