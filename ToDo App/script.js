@@ -4,7 +4,7 @@ const addTaskBtn = document.querySelector(".addTaskBtn");
 let heading = document.querySelector(".heading");
 
 function addToDo() {
-  if (inputBox.value !== "") {
+  if (inputBox.value.trim() !== "") {
     //creating ul and li
     let ul = document.createElement("ul");
     let li = document.createElement("li");
@@ -82,6 +82,12 @@ function addToDo() {
       } else if (evt.target.innerText === "Done") {
         ToDo_inputBox.readOnly = true;
         evt.target.innerText = "Edit";
+      }
+    });
+
+    ToDo_inputBox.addEventListener("keydown", (evt) => {
+      if (evt.key === "Enter" && !ToDo_inputBox.readOnly) {
+        edit_btn.click();
       }
     });
 

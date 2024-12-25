@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 3rem;
 }
 
 section {
@@ -72,10 +73,23 @@ section ul li {
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 .deleteAllBtn {
   color: crimson;
+}
+
+.addTaskBtn:hover,
+.edit_btn:hover {
+  box-shadow: 0 0 10px #8b5cf6, 0 0 20px #ec4899;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.deleteAllBtn:hover {
+  box-shadow: 0 0 20px 5px crimson;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 /* styling section two */
@@ -90,6 +104,12 @@ section ul li {
 .completeBtn,
 .deleteAllBtn {
   cursor: pointer;
+}
+
+.deleteBtn:hover,
+.completeBtn:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
 }
 /* media queries */
 @media (max-width: 680px) {
