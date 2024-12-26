@@ -2,6 +2,8 @@
 const inputBox = document.querySelector("#inputBox");
 const addTaskBtn = document.querySelector(".addTaskBtn");
 let heading = document.querySelector(".heading");
+let secTwo = document.querySelector(".secTwo");
+let listContainer = document.querySelector(".listContainer");
 
 function addToDo() {
   if (inputBox.value.trim() !== "") {
@@ -32,7 +34,7 @@ function addToDo() {
     edit_btn.classList.add("edit_btn");
 
     //adding elements
-    document.querySelector(".secTwo").append(ul);
+    listContainer.append(ul);
     ul.prepend(li);
     li.appendChild(ToDo_inputBox);
     li.appendChild(edit_btn);
